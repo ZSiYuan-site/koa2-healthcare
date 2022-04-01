@@ -5,11 +5,11 @@
 
 const mongoose = require('mongoose')
 
-const DB_NAME = 'demo'
-const PORT = 72017
+const DB_NAME = 'healthcare'
+const PORT = 27017
 const IP = 'localhost'
 
-mongoose.connection.on(`mongodb://${IP}:${PORT}/${DB_NAME}`, {
+mongoose.connect(`mongodb://${IP}:${PORT}/${DB_NAME}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
